@@ -71,6 +71,13 @@ plt.show()
 
 #-----------------------------------------------------------------------------#
 
+from sklearn.metrics import confusion_matrix
+
+clf = tree.DecisionTreeClassifier(max_depth=14)
+clf.fit(X_train, y_train) 
+y_predict_dt = clf.predict(X_test)
+c_df = confusion_matrix(y_test, y_predict_dt)
+c_df
 
 #-----------------------------------------------------------------------------#
 
